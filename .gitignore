@@ -17,6 +17,7 @@ share/python-wheels/
 .installed.cfg
 *.egg
 MANIFEST
+**/token.txt
 
 # Environments
 .env
@@ -36,3 +37,4 @@ scratchpad/
 __pycache__/
 *.py[cod]
 *$py.class
+
