@@ -19,20 +19,32 @@ The Json file can then be used as a list, dictionary etc. to link the Godot clas
 page on the godot website.
 
 ## Prerequisites
-The program relies upon the GhApi library  and instructions for its installation and use are at https://ghapi.fast.ai
+The program relies upon the GhApi library and instructions for its installation and use are at https://ghapi.fast.ai
 
+
+## Installing
+You can install the Godot api reference maker package with pip:
+
+``` bash
+# On Linux
+python3 -m pip install godot-api-refs
+
+# On Windows, if you installed Python 3.7+, you can use:
+python -m pip install gdscript_docs_maker
+```
+I do not have access to a MacOS box so cannot test if it installs and runs OK in that environment.  However, the program is quite simple so it should prove no problem for a standard python environment.
 ## Running the program
 
-The program is small so can be run stand alone with:
-* `python make-godot-api-refs/__main__.py ` <br/>
+The program can be run using
 
-or by treating it as a module with 
-* `python -m make-godot-api-refs`
+`python -m godot-api-refs` 
+ 
+This will generate the Godot class links from the stable branch and store them in the file godot_api_calls.json in the current working directory
 
-using `python -m make-godot-api-refs -h` will result in 
 
+The progam can be invoked with -h which will give the following output:
 ```
-usage: __main__.py [-h] [--token TOKEN] [--branch BRANCH] [-v] [--check-branches]
+usage: python -m godot-api-ref [options]
 
 Given a godot-docs branch it scans the class folder and creates a JSON file linking the Godot class name with the API reference
 
@@ -43,8 +55,13 @@ optional arguments:
   -v, --verbose     Set the verbosity level. For example -vv sets verbosity to level 2. Default: 0.
   --check-branches  print out a list of the Godot document branches then exit without making the links
 ```
+The Godot API list can be read from branches other than the stable branch if you require it by using the --branch option (for example `--branch master` will load links to the latest API documentation. )
 
-The output file will be `godot_api_calls.json` and will be placed in current working directory 
+The option `--check-branches` is an aid to show what branches are available on github; it will print out a simple list then exit.
+
+The option `--token` allows the user to supply an github user token.  This is available in case the user has exhausted their calls to the github api using unauthenticated requests.
+
+The output file will be `godot_api_calls.json` and will be placed in current working directory.
 
 
 
