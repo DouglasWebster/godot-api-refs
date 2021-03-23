@@ -19,7 +19,7 @@ The Json file can then be used as a list, dictionary etc. to link the Godot clas
 page on the godot website.
 
 ## Prerequisites
-The program relies upon the GhApi library and instructions for its installation and use are at https://ghapi.fast.ai
+The program relies upon the GhApi library and instructions for its installation and use; it will fail to install if the GhApi library is not already installed.  Instruction for the installation of GhApi can be found at https://ghapi.fast.ai
 
 
 ## Installing
