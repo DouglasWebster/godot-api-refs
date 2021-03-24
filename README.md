@@ -30,7 +30,7 @@ You can install the Godot api reference maker package with pip:
 python3 -m pip install godot-api-refs
 
 # On Windows, if you installed Python 3.7+, you can use:
-python -m pip install gdscript_docs_maker
+python -m pip install godot-api-refs
 ```
 I do not have access to a MacOS box so cannot test if it installs and runs OK in that environment.  However, the program is quite simple so it should prove no problem for a standard python environment.
 ## Running the program
