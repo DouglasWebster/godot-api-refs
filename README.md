@@ -37,14 +37,14 @@ I do not have access to a MacOS box so cannot test if it installs and runs OK in
 
 The program can be run using
 
-`python -m godot-api-refs` 
+`python -m godot_api_refs` 
  
 This will generate the Godot class links from the stable branch and store them in the file godot_api_calls.json in the current working directory
 
 
 The progam can be invoked with -h which will give the following output:
 ```
-usage: python -m godot-api-ref [options]
+usage: python -m godot_api_ref [options]
 
 Given a godot-docs branch it scans the class folder and creates a JSON file linking the Godot class name with the API reference
 
