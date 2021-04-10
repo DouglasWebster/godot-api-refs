@@ -18,7 +18,7 @@ LOG_LEVELS = [None] + sorted(LOG_LEVELS, reverse=True)
 
 def parse() -> Namespace:
     parser: ArgumentParser = ArgumentParser(
-        prog="godot-api-ref",
+        prog="godot_api_ref",
         usage="python -m %(prog)s [options]",
         description="Given a godot-docs branch it scans the class folder "
         "and creates a JSON file linking the Godot class name with the API reference",
